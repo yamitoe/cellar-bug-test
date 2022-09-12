@@ -12,30 +12,36 @@ class App extends Component {
 
     this.state = {
       showLoginForm: true,
-      showCheckmark: false
+      showCheckmark: false,
+      showLogoutButton: false
     };
   }
   // Auto-bind syntax
+  // Moving state up
+
+  // Auto-bind syntax
   handleLogin =()=>{
-    this.refs.navbutton.handleLogoutButton();
     this.setState({ 
       showLoginForm: true,
-      showCheckmark: true
+      showCheckmark: true,
+      showLogoutButton: true
     });
   }
 
   handleLogout = ()=>{
-    this.refs.navbutton.handleLogoutButton();
     this.setState({
       showLoginForm: true,
-      showCheckmark: false
+      showCheckmark: false,
+      showLogoutButton: false
     });
   }
+
 
   render() {
     return (
       <div className='app'>
-        <Navbar ref='navbutton' handleLogout={this.handleLogout} />
+        {/* Benefit is the data is actaully hidden and won't be prerenderd when it was "invisible" before */}
+        <Navbar ref='navbutton' handleLogout={this.handleLogout} showLogoutButton={this.state.showLogoutButton} />
         {
           this.state.showLoginForm
           &&
