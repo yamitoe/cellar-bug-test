@@ -36,11 +36,14 @@ class App extends Component {
     return (
       <div className='app'>
         <Navbar ref='navbutton' handleLogout={this.handleLogout} />
-        <div className={this.state.showLoginForm === true ? '' : 'hide'}>
-          <LoginForm handleLogin={this.handleLogin} />
-        </div>
         {
-          this.state.showCheckmark  && 
+          this.state.showLoginForm
+          &&
+          <LoginForm handleLogin={this.handleLogin} />
+        }
+        {
+          this.state.showCheckmark 
+          && 
           <div className={'text-center mt9x'}>
             <Glyphicon glyph='glyphicon glyphicon-ok-sign' />
             <h2>Great work!</h2>
