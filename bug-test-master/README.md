@@ -19,4 +19,5 @@ This is a bug test where we evaluate your ability to resolve bugs based on conso
 ## List of fixes
 - React component navbar.js not capitalized 
 - Navbar -> this = {} to this.state = {}
+- react-bootstrap 0.33 to be installed
 

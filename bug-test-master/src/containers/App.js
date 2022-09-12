@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import LoginForm from "../components/LoginForm"
 import { Glyphicon } from 'react-bootstrap';
 import '../styles/App.css';
 
