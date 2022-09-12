@@ -20,4 +20,15 @@ This is a bug test where we evaluate your ability to resolve bugs based on conso
 - React component navbar.js not capitalized 
 - Navbar -> this = {} to this.state = {}
 - react-bootstrap 0.33 to be installed
+- import the stylesheet in index.html
+- teneary operator to &&
+- Lifting State
+- Fix login button
+- Fix logout button -> Next button shouldnt really log you out if you click
+- Refactoring code -> shortening if statement, removing constructor(), arrow function binding
+  ## Possible improvement that could be added
+  - Writting the code in hooks API
+  But since its already written in class syntax might as well leave it. That and esnext syntax cleans up
+  some of the boilerplate in class components
+
 
