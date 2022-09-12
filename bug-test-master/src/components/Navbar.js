@@ -2,19 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 
 class Navbar extends Component {
-
-    constructor(props) {
-    super(props);
-
-    // this.state = { showLogoutButton: false };
-  }
-
-  // handleLogoutButton() {
-  //   this.setState(prevState => ({
-  //     showLogoutButton: !prevState.showLogoutButton
-  //   }));
-  // }
-
+  
   render() {
     let sessionButton;
     if (this.props.showLogoutButton) {

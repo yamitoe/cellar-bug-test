@@ -7,18 +7,14 @@ import '../styles/App.css';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
+  // ESNext syntax, babel auto complies "this" prefix for state so constructor() method can be removed
+    state = {
       showLoginForm: true,
       showCheckmark: false,
+      // Moving state up
       showLogoutButton: false
     };
-  }
-  // Auto-bind syntax
-  // Moving state up
-
+  
   // Auto-bind syntax
   handleLogin =()=>{
     this.setState({ 
@@ -40,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        {/* Benefit is the data is actaully hidden and won't be prerenderd when it was "invisible" before */}
+        {/* Benefit is the data is actaully hidden and won't be prerenderd when it was "invisible" */}
         <Navbar ref='navbutton' handleLogout={this.handleLogout} showLogoutButton={this.state.showLogoutButton} />
         {
           this.state.showLoginForm
