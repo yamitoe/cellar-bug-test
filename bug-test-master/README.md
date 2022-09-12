@@ -10,3 +10,13 @@ This is a bug test where we evaluate your ability to resolve bugs based on conso
 - Make the improvements with comments as to why you'd make those improvements
 
 ## Good luck!
+
+# Bug Testing and Fixes Report by Kevin
+## App not starting - "missing index.js"
+- src folder was misnamed as srce
+## ERROR in ./src/components/Footer.js
+- "extend" -> "extends"
+## List of fixes
+- React component navbar.js not capitalized 
+- Navbar -> this = {} to this.state = {}
+
