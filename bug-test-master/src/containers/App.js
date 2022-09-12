@@ -14,10 +14,9 @@ class App extends Component {
       showLoginForm: true,
       showCheckmark: false
     };
-    this.handleLogout = this.handleLogout.bind(this);
   }
-
-  handleLogin() {
+  // Auto-bind syntax
+  handleLogin =()=>{
     this.refs.navbutton.handleLogoutButton();
     this.setState({ 
       showLoginForm: true,
@@ -25,7 +24,7 @@ class App extends Component {
     });
   }
 
-  handleLogout() {
+  handleLogout = ()=>{
     this.refs.navbutton.handleLogoutButton();
     this.setState({
       showLoginForm: true,
