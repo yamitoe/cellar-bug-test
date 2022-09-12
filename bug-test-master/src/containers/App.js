@@ -39,10 +39,13 @@ class App extends Component {
         <div className={this.state.showLoginForm === true ? '' : 'hide'}>
           <LoginForm handleLogin={this.handleLogin} />
         </div>
-        <div className={this.state.showCheckmark === true ? 'text-center mt9x' : 'hide'}>
-          <Glyphicon glyph='glyphicon glyphicon-ok-sign' />
-          <h2>Great work!</h2>
-        </div>
+        {
+          this.state.showCheckmark  && 
+          <div className={'text-center mt9x'}>
+            <Glyphicon glyph='glyphicon glyphicon-ok-sign' />
+            <h2>Great work!</h2>
+          </div>
+        }
         <Footer />
       </div>
     );
